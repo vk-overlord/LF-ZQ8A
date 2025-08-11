@@ -75,23 +75,3 @@ footer{
   .navlinks{ display:none; } /* simpel: für Start ohne Mobile-Menu */
   .cards{ grid-template-columns: 1fr; }
 }
-
-/* ===== Unterseiten ===== */
-.page-content {
-  padding-block: 2rem;
-}
-
-.page-content h1 {
-  margin-top: 0;
-  font-size: clamp(2rem, 3vw, 2.5rem);
-}
-
-.page-content .lead {
-  font-size: 1.125rem;
-  color: var(--muted);
-  margin-bottom: 2rem;
-}
-
-.page-content section {
-  margin-bottom: 2rem;
-}
