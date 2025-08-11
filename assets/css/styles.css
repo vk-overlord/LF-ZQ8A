@@ -16,9 +16,9 @@ body {
   --max-w: 1200px;
   --space: 1rem;
   --radius: 16px;
-  --accent: #c19a6b;      /* warmes Gold */
-  --accent-ink: #241a12;  /* dunkler Kontrast */
-  --muted: #6b7280;       /* gray-500 */
+  --accent: #b68b58;      
+  --accent-ink: #3a2a1d;  
+  --muted: #cfcaca;       
 }
 
 /* ===== Utilities ===== */
@@ -42,16 +42,28 @@ header.site-header{
 .navlinks a:hover { color: var(--accent-ink); }
 
 /* ===== Hero ===== */
-.hero{
-  position: relative; isolation: isolate; color: #111;
-  min-height: 70vh; display: grid; place-items: center; text-align: center;
-  background: #faf7f2 url("../img/hero.jpg") center / cover no-repeat;
+.hero {
+  position: relative;
+  isolation: isolate;
+  color: #faf7f2;
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #faf7f2 url("/assets/img/restaurant.png") center / cover no-repeat;
 }
-.hero::after{
-  content:""; position:absolute; inset:0; background: linear-gradient(180deg, #ffffff99 0%, #ffffff 70%);
-  z-index:-1;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.4) 0%,    
+    rgba(0,0,0,0.6) 70%    
+  );
+  z-index: -1;
 }
-.hero h1{ font-size: clamp(2rem, 4vw, 3.25rem); margin: 0 0 .5rem; }
+.hero h1{ font-size: clamp(1.5rem, 3vw, 2.5rem); margin: 0 0 .5rem; }
 .hero p{ max-width: 65ch; margin: 0 auto 1.25rem; color: var(--muted); }
 
 /* ===== Karten (Pakete) ===== */
