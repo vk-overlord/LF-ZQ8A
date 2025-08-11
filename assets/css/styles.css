@@ -62,12 +62,52 @@ header.site-header{
 .card h3{ margin: 0 0 .25rem; }
 .card p{ margin: .25rem 0 .75rem; color: var(--muted); }
 
-.speisekarte{ display:grid; grid-template-columns: 1fr; gap:1rem; margin-block: 2rem; }
-.speise{
-  border: 1px solid #eee; border-radius: var(--radius); padding: 1.25rem; background: #fff;
+
+.speisekarte {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-block: 2rem;
 }
-.speise h3{ margin: 0 0 .25rem; }
-.speise p{ margin: .25rem 0 .75rem; color: var(--muted); }
+
+.speise {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  color: white; /* Textfarbe weiß für bessere Lesbarkeit */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.speise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dunkler Overlay für besseren Kontrast */
+  border-radius: var(--radius);
+  z-index: 0;
+}
+
+.speise > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Einzelne Hintergrundbilder */
+.nudeln {
+  background-image: url('/assets/img/nudeln.png');
+}
+
+.currywurst {
+  background-image: url('/assets/img/curryworscht.png');
+}
+
+.doener {
+  background-image: url('/assets/img/doener.png');
+}
 
 /* ===== Footer ===== */
 footer{
