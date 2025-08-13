@@ -2,159 +2,171 @@
 <!-- HTML5 Dokumenttyp-Deklaration -->
 <html lang="de">
 <!-- HTML-Root-Element mit deutscher Sprache für SEO und Accessibility -->
+
 <head>
-  <!-- Zeichensatz UTF-8 für korrekte Darstellung von Umlauten -->
-  <meta charset="utf-8">
-  
-  <!-- Viewport-Meta-Tag für responsive Design auf mobilen Geräten -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Seitentitel für Browser-Tab und Suchmaschinen -->
-  <title>Unsere Chefköchin – Restaurant Aurora</title>
-  
-  <!-- Meta-Description für SEO - beschreibt den Inhalt der Seite -->
-  <meta name="description" content="Lerne Chefköchin Anna Schmidt kennen – kreative Fine-Dining-Küche, nachhaltige Zutaten, Auszeichnungen und Signature Dishes.">
-  
-  <!-- Verlinkung zur externen CSS-Datei -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Zeichensatz UTF-8 für korrekte Darstellung von Umlauten -->
+    <meta charset="utf-8">
+
+    <!-- Viewport-Meta-Tag für responsive Design auf mobilen Geräten -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Seitentitel für Browser-Tab und Suchmaschinen -->
+    <title>Unsere Chefköchin – Restaurant Aurora</title>
+
+    <!-- Meta-Description für SEO - beschreibt den Inhalt der Seite -->
+    <meta name="description"
+        content="Lerne Chefköchin Anna Schmidt kennen – kreative Fine-Dining-Küche, nachhaltige Zutaten, Auszeichnungen und Signature Dishes.">
+
+    <!-- Verlinkung zur externen CSS-Datei -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
-  <!-- Header-Bereich der Website -->
-  <header class="site-header">
-    <!-- Container für Navigationsleiste -->
-    <div class="container navbar">
-      <!-- Logo/Markenname des Restaurants -->
-      <div class="brand">Restaurant Aurora</div>
-      
-      <!-- Hauptnavigation mit ARIA-Label für Screenreader -->
-      <nav class="navlinks" aria-label="Hauptnavigation">
-        <!-- Navigationslinks zu verschiedenen Seiten -->
-        <a href="/index.html">Event-Catering</a>
-        <!-- Aktuelle Seite mit aria-current für bessere Accessibility -->
-        <a href="chef.html" aria-current="page">Unsere Chefköchin</a>
-        <a href="speisekarte.html">Speisekarte</a>
-        <a href="rezepte.html">Rezepte</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Header-Bereich der Website -->
+    <header class="site-header">
+        <!-- Container für Navigationsleiste -->
+        <div class="container navbar">
+            <!-- Logo/Markenname des Restaurants -->
+            <div class="brand">Restaurant Aurora</div>
 
-  <!-- Hauptinhalt der Seite -->
-  <main>
-    <!-- Einführungssektion mit Seitentitel -->
-    <section class="container">
-      <!-- Hauptüberschrift der Seite -->
-      <h1 class="page-title">Unsere Chefköchin</h1>
-      
-      <!-- Lead-Paragraph mit einführendem Text -->
-      <p class="lead">Anna Schmidt führt die Küche des Aurora mit einer Handschrift, die
-        Regionalität, Saison und moderne Techniken verbindet – präzise, leicht und überraschend.</p>
-    </section>
-
-<!-- Profil -->
-<section class="container profile-card" style="--profile-card-w: 380px;">
-  <figure class="card portrait-card">
-    <img src="/assets/img/Anna_Schmidt.jpg"
-         alt="Chefköchin Anna Schmidt im Portrait"
-         loading="lazy">
-    <figcaption>
-      <strong>Über Anna Schmidt</strong>
-      <span>Aufgewachsen zwischen Streuobstwiesen und Wochenmärkten, verfeinert Anna
-        klassische Aromen mit modernen Techniken – regional, saisonal und präzise.</span> 
-        <span class="tag">Fine Dining Saisonal & Regional Vegetarisch kreativ Fermentation.</span>
-        <span class="tag"><em>"Ein gutes Gericht erzählt, woher es kommt – und warum es jetzt auf dem Teller liegt."</em></span>
-    </figcaption>
-  </figure>
-
-        <!-- Lebenslauf-Sektion -->
-        <div class="cv">
-          <h3>Kreativer Lebenslauf</h3>
-          
-          <ul class="timeline">
-            <li>
-              <time>2010 – 2013</time> Ausbildung zur Köchin, <strong>Hotel Schwarzwaldhof</strong>. <em>Französische Basis, Saucen & Fonds.</em>
-              <p><time>2014 – 2018</time> Sous-Chefin bei <strong>Restaurant Lumière, Berlin.</strong> <em>Gemüse im Mittelpunkt, erste Menüs.</em></p>
-              <p></p><time>2019 – 2022</time> Kulinarische Reisen: <strong>Skandinavien & Japan.</strong> <em>Fermentation, Räuchern, klare Brühen.</em></p>
-              <p><time>2023 – heute</time> Chefköchin im <strong>Restaurant Aurora</strong>. <em>Signatures: Sellerie „Carbonara", Lachs mit Apfel-Miso-Glasur.</em></p>
-            </li>
-          </ul>
+            <!-- Hauptnavigation mit ARIA-Label für Screenreader -->
+            <nav class="navlinks" aria-label="Hauptnavigation">
+                <!-- Navigationslinks zu verschiedenen Seiten -->
+                <a href="/index.html">Event-Catering</a>
+                <!-- Aktuelle Seite mit aria-current für bessere Accessibility -->
+                <a href="chef.html" aria-current="page">Unsere Chefköchin</a>
+                <a href="speisekarte.html">Speisekarte</a>
+                <a href="rezepte.html">Rezepte</a>
+            </nav>
         </div>
-        
-        <!-- Call-to-Action Button zum Catering-Formular -->
-        <a class="btn btn-primary" href="/index.html#formular">Catering mit Anna anfragen</a>
-      </div>
-    </section>
+    </header>
 
-    <!-- Galerie -->
-<section class="container gallery">
-  <h2>Galerie: Kreationen</h2>
+    <!-- Hauptinhalt der Seite -->
+    <main>
+        <!-- Einführungssektion mit Seitentitel -->
+        <section class="container">
+            <!-- Hauptüberschrift der Seite -->
+            <h1 class="page-title">Unsere Chefköchin</h1>
 
-  <div class="gallery-grid">
-    <figure class="card">
-      <img src="/assets/img/Carbonara.jpg" alt="Signature: Sellerie »Carbonara«" loading="lazy">
-      <figcaption>
-        <strong>Sellerie „Carbonara“</strong>
-        <span>Selleriestreifen in cremiger Carbonara-Emulsion, Pecorino & schwarzer Pfeffer.</span>
-      </figcaption>
-    </figure>
+            <!-- Lead-Paragraph mit einführendem Text -->
+            <p class="lead">Anna Schmidt führt die Küche des Aurora mit einer Handschrift, die
+                Regionalität, Saison und moderne Techniken verbindet – präzise, leicht und überraschend.</p>
+        </section>
 
-    <figure class="card">
-      <img src="/assets/img/Lachs_mit_Apfel-Miso-Glasur.jpg" alt="Lachs mit Apfel-Miso-Glasur" loading="lazy">
-      <figcaption>
-        <strong>Lachs mit Apfel-Miso-Glasur</strong>
-        <span>Sanft gegart, süß-herzhaft glasiert, mit jungen Kräutern.</span>
-      </figcaption>
-    </figure>
+        <!-- Profil -->
+        <section class="container profile-card" style="--profile-card-w: 380px;">
+            <div class="profile-wrapper">
+                <figure class="card portrait-card">
+                    <img src="/assets/img/Anna_Schmidt.jpg" alt="Chefköchin Anna Schmidt im Portrait" loading="lazy">
+                    <figcaption>
+                        <strong>Über Anna Schmidt</strong>
+                        <span>Aufgewachsen zwischen Streuobstwiesen und Wochenmärkten, verfeinert Anna
+                            klassische Aromen mit modernen Techniken – regional, saisonal und präzise.</span>
+                        <span class="tag">Fine Dining Saisonal & Regional Vegetarisch kreativ Fermentation.</span>
+                        <span class="tag"><em>"Ein gutes Gericht erzählt, woher es kommt – und warum es jetzt auf dem
+                                Teller liegt."</em></span>
+                    </figcaption>
+                </figure>
 
-    <figure class="card">
-      <img src="/assets/img/Fermentierter_Spargel.jpg" alt="Fermentierter Spargel mit Molke" loading="lazy">
-      <figcaption>
-        <strong>Fermentierter Spargel mit Molke</strong>
-        <span>Weißer Spargel in Molke-Dill-Sud, feine Säure & Frische.</span>
-      </figcaption>
-    </figure>
+                <!-- Lebenslauf-Sektion -->
+                <div class="cv">
+                    <h3>Kreativer Lebenslauf</h3>
 
-    <figure class="card">
-      <img src="/assets/img/Molke_Rote-Bete.jpg" alt="Rote-Bete-Tatar" loading="lazy">
-      <figcaption>
-        <strong>Rote-Bete-Tatar</strong>
-        <span>Mit Roggencrunch, Kräuteröl und eingelegter Zwiebel.</span>
-      </figcaption>
-    </figure>
+                    <ul class="timeline">
+                        <li><time>2010 – 2013</time> Ausbildung zur Köchin, <strong>Hotel Schwarzwaldhof</strong>.</li>
+                            <em>Französische Basis, Saucen & Fonds.</em>
+                        <li><p><time>2014 – 2018</time> Sous-Chefin bei <strong>Restaurant Lumière, Berlin.</strong></li>
+                                <em>Gemüse im Mittelpunkt, erste Menüs.</em></p>
+                        <li><p></p><time>2019 – 2022</time> Kulinarische Reisen: <strong>Skandinavien & Japan.</strong></li>
+                            <em>Fermentation, Räuchern, klare Brühen.</em></p>
+                        <li><p><time>2023 – heute</time> Chefköchin im <strong>Restaurant Aurora</strong>.</li>
+                                <em>Signatures: Sellerie „Carbonara", Lachs mit Apfel-Miso-Glasur.</em></p>
+                        
+                    </ul>
+                </div>
 
-    <figure class="card">
-      <img src="/assets/img/Tatar_Schokoladen-Dessert.jpg" alt="Schokoladen-Dessert mit Buchweizen" loading="lazy">
-      <figcaption>
-        <strong>Schokoladen-Dessert mit Buchweizen</strong>
-        <span>Glänzender Schokodome auf geröstetem Buchweizen, knusprige Tuile.</span>
-      </figcaption>
-    </figure>
+            </div>
+            <div>
+            <!-- Call-to-Action Button zum Catering-Formular -->
+            <a class="btn btn-primary" href="/index.html#formular">Catering mit Anna anfragen</a>
+            </div>
+        </section>
 
-    <figure class="card">
-      <img src="/assets/img/Auster_mit_Dill-Öl.jpg" alt="Auster mit Dill-Öl" loading="lazy">
-      <figcaption>
-        <strong>Auster mit Dill-Öl</strong>
-        <span>Auf Crushed Ice, Dill-Öl und Zitronenzeste.</span>
-      </figcaption>
-    </figure>
-  </div>
-</section>
+        <!-- Galerie -->
+        <section class="container gallery">
+            <h2>Galerie: Kreationen</h2>
 
-  <!-- Footer-Bereich -->
-  <footer>
-    <!-- Container für Footer-Inhalt -->
-    <div class="container">
-      <!-- Restaurantname in fett -->
-      <strong>Restaurant Aurora</strong><br>
-      <!-- Kontaktdaten: Adresse, Telefon und E-Mail -->
-      Musterstraße 1, 60311 Frankfurt am Main · Tel. 069 / 123456 ·
-      <a href="mailto:hallo@aurora.example">hallo@aurora.example</a>  
-    
-      <!-- Rechtliche Links -->
-      <p>
-        <a href="/pages/impressum.html">Impressum</a> ·
-        <a href="/pages/datenschutz.html">Datenschutz</a>
-      </p>
-    </div>
-  </footer>
+            <div class="gallery-grid">
+                <figure class="card">
+                    <img src="/assets/img/Carbonara.jpg" alt="Signature: Sellerie »Carbonara«" loading="lazy">
+                    <figcaption>
+                        <strong>Sellerie „Carbonara“</strong>
+                        <span>Selleriestreifen in cremiger Carbonara-Emulsion, Pecorino & schwarzer Pfeffer.</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="/assets/img/Lachs_mit_Apfel-Miso-Glasur.jpg" alt="Lachs mit Apfel-Miso-Glasur"
+                        loading="lazy">
+                    <figcaption>
+                        <strong>Lachs mit Apfel-Miso-Glasur</strong>
+                        <span>Sanft gegart, süß-herzhaft glasiert, mit jungen Kräutern.</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="/assets/img/Fermentierter_Spargel.jpg" alt="Fermentierter Spargel mit Molke"
+                        loading="lazy">
+                    <figcaption>
+                        <strong>Fermentierter Spargel mit Molke</strong>
+                        <span>Weißer Spargel in Molke-Dill-Sud, feine Säure & Frische.</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="/assets/img/Molke_Rote-Bete.jpg" alt="Rote-Bete-Tatar" loading="lazy">
+                    <figcaption>
+                        <strong>Rote-Bete-Tatar</strong>
+                        <span>Mit Roggencrunch, Kräuteröl und eingelegter Zwiebel.</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="/assets/img/Tatar_Schokoladen-Dessert.jpg" alt="Schokoladen-Dessert mit Buchweizen"
+                        loading="lazy">
+                    <figcaption>
+                        <strong>Schokoladen-Dessert mit Buchweizen</strong>
+                        <span>Glänzender Schokodome auf geröstetem Buchweizen, knusprige Tuile.</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="/assets/img/Auster_mit_Dill-Öl.jpg" alt="Auster mit Dill-Öl" loading="lazy">
+                    <figcaption>
+                        <strong>Auster mit Dill-Öl</strong>
+                        <span>Auf Crushed Ice, Dill-Öl und Zitronenzeste.</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Footer-Bereich -->
+        <footer>
+            <!-- Container für Footer-Inhalt -->
+            <div class="container">
+                <!-- Restaurantname in fett -->
+                <strong>Restaurant Aurora</strong><br>
+                <!-- Kontaktdaten: Adresse, Telefon und E-Mail -->
+                Musterstraße 1, 60311 Frankfurt am Main · Tel. 069 / 123456 ·
+                <a href="mailto:hallo@aurora.example">hallo@aurora.example</a>
+
+                <!-- Rechtliche Links -->
+                <p>
+                    <a href="/pages/impressum.html">Impressum</a> ·
+                    <a href="/pages/datenschutz.html">Datenschutz</a>
+                </p>
+            </div>
+        </footer>
 </body>
+
 </html>
