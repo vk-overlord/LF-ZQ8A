@@ -74,6 +74,36 @@ body {
   transform: scale(1.2); /* Vergrößert Button um 20% */
 }
 
+.btn-anfrage
+/* Secondary Button Styling */ 
+{
+  display: inline-block; 
+  padding: .875rem 1.25rem; /* Innenabstand oben/unten links/rechts */
+  border-radius: 999px; /* Vollständig runde Ecken (Pill-Shape) */
+  text-decoration: none; /* Entfernt Unterstreichung bei Links */
+  font-weight: 600; /* Halbfett */
+  transition: all .5s; /* Sanfte Übergänge für alle Eigenschaften */
+  background: #e5b474; /* Transparenter Hintergrund */
+  color: var(--accent-ink); /* Dunkle Textfarbe */
+}
+
+.btn-anfrage:focus, 
+.btn-anfrage:hover { 
+  filter: brightness(0.95); /* Macht Button 5% dunkler */
+}
+
+.btn-zuruecksetzen
+{
+  display: inline-block; 
+  padding: .875rem 1.25rem; /* Innenabstand oben/unten links/rechts */
+  border-radius: 999px; /* Vollständig runde Ecken (Pill-Shape) */
+  text-decoration: none; /* Entfernt Unterstreichung bei Links */
+  font-weight: 600; /* Halbfett */
+  transition: all .5s; /* Sanfte Übergänge für alle Eigenschaften */
+  background: #e5b474; /* Transparenter Hintergrund */
+  color: var(--accent-ink); /* Dunkle Textfarbe */
+}
+
 /* ===== Header / Nav ===== */
 
 /* Sticky Header: Bleibt beim Scrollen oben sichtbar */
