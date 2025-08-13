@@ -194,28 +194,77 @@ footer{
   display: block;     /* Verhindert unnötige Lücken bei Inline-Elementen */
 }
 
-/* Zweispaltiges Profil-Layout */
-.profile{
-  --profile-img-w: clamp(260px, 32vw, 380px); /* Bildbreite bequem anpassen */
+/* Profil-Card Container */
+.profile-card{
+  /* Breite der Portrait-Karte bequem steuerbar: */
+  --profile-card-w: clamp(260px, 32vw, 420px);
   display: grid;
-  grid-template-columns: var(--profile-img-w) 1fr;
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: start;
+  gap: 1.25rem;
 }
 
-.profile-media{ margin: 0; }
-.profile-media img{
+/* Karte im Portrait-Format (eigener Override zur Galerie-Karte) */
+.card.portrait-card{
+  width: var(--profile-card-w);   /* HIER hängt die Bild-/Kartengröße dran */
+  margin: 0;
+}
+
+.card.portrait-card img{
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 4;            /* Hochformat */
   object-fit: cover;
-  border-radius: 12px;
+  display: block;
+  border-radius: 12px 12px 0 0;   /* optional: runde Ecken nur oben */
 }
-.profile .muted{ color: var(--muted); margin-top: .5rem; display: block; }
-.profile-content .quote{ margin: 1rem 0; }
-.profile .timeline { list-style: none; padding: 0; margin: .5rem 0 0; }
-.profile .timeline li { margin-bottom: .75rem; }
 
-/* Mobil einspaltig */
-@media (max-width: 800px){
-  .profile{ grid-template-columns: 1fr; }
+.card.portrait-card figcaption{
+  padding: .75rem .9rem;
+  display: grid;
+  gap: .25rem;
+}
+
+.card.portrait-card figcaption span{
+  color: var(--muted, #9aa);
+  font-size: .95rem;
+  line-height: 1.35;
+}
+
+/* CV-Liste bleibt wie gehabt; optional etwas Abstand */
+.profile-card .cv{ margin-top: .25rem; }
+
+/* ===== Galerie ===== */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card{
+  margin: 0;
+  background: var(--surface, #111);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 12px rgba(0,0,0,.1);
+}
+
+.card img{
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* einheitliche Kachel-Höhe */
+  object-fit: cover;
+  display: block;
+}
+
+.card figcaption{
+  padding: .75rem .9rem;
+  display: grid;
+  gap: .25rem;
+}
+
+.card figcaption strong{
+  font-weight: 600;
+}
+
+.card figcaption span{
+  color: var(--muted, #9aa);
+  font-size: .95rem;
+  line-height: 1.3;
 }

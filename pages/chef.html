@@ -29,56 +29,87 @@
     </section>
 
 <!-- Profil -->
-<section class="container profile" aria-labelledby="ueber-anna">
-  <figure class="profile-media">
+<section class="container profile-card" style="--profile-card-w: 380px;">
+  <figure class="card portrait-card">
     <img src="/assets/img/Anna_Schmidt.jpg"
          alt="Chefköchin Anna Schmidt im Portrait"
-         width="840" height="1160" loading="lazy">
+         loading="lazy">
+    <figcaption>
+      <strong>Über Anna Schmidt</strong>
+      <span>Aufgewachsen zwischen Streuobstwiesen und Wochenmärkten, verfeinert Anna
+        klassische Aromen mit modernen Techniken – regional, saisonal und präzise.</span>
+    </figcaption>
   </figure>
 
-  <div class="profile-content">
-    <h2 id="ueber-anna">Über Anna Schmidt</h2>
-    <p>Aufgewachsen zwischen Streuobstwiesen und Wochenmärkten, verfeinert Anna klassische
-      Aromen mit zeitgenössischen Ideen – und legt dabei Wert auf kurze Wege und respektvolle Produktion.</p>
-
-    <div class="tags">
-      <span class="tag">Fine Dining</span>
-      <span class="tag">Saisonal & Regional</span>
-      <span class="tag">Vegetarisch kreativ</span>
-      <span class="tag">Fermentation</span>
-    </div>
-
-    <blockquote class="quote">
-      <em>„Ein gutes Gericht erzählt, woher es kommt – und warum es jetzt auf dem Teller liegt.“</em>
-    </blockquote>
-
-    <div class="cv">
-      <h3>Kreativer Lebenslauf</h3>
-      <ul class="timeline">
-        <li><time>2010–2013</time> Ausbildung zur Köchin, <strong>Hotel Schwarzwaldhof</strong>. <p>Französische Basis, Saucen & Fonds.</p></li>
-        <li><time>2014–2018</time> <strong>Sous-Chefin</strong> bei <strong>Restaurant Lumière, Berlin</strong>. <p>Gemüse im Mittelpunkt, erste Menüs.</p></li>
-        <li><time>2019–2022</time> Kulinarische Reisen: Skandinavien & Japan. <p>Fermentation, Räuchern, klare Brühen.</p></li>
-        <li><time>2023–heute</time> <strong>Chefköchin</strong> im <strong>Restaurant Aurora</strong>. <p>Signatures: Sellerie „Carbonara“, Lachs mit Apfel-Miso-Glasur.</p></li>
-      </ul>
-    </div>
+<!-- Lebenslauf / CV -->
+  <div class="cv">
+    <h3>Kreativer Lebenslauf</h3>
+    <ul class="timeline">
+      <li><time>2010–2013</time> Ausbildung zur Köchin, <strong>Hotel Schwarzwaldhof</strong>. <p>Französische Basis, Saucen & Fonds.</p></li>
+      <li><time>2014–2018</time> <strong>Sous-Chefin</strong> bei <strong>Restaurant Lumière, Berlin</strong>. <p>Gemüse im Mittelpunkt, erste Menüs.</p></li>
+      <li><time>2019–2022</time> Kulinarische Reisen: Skandinavien & Japan. <p>Fermentation, Räuchern, klare Brühen.</p></li>
+      <li><time>2023–heute</time> <strong>Chefköchin</strong> im <strong>Restaurant Aurora</strong>. <p>Signatures: Sellerie „Carbonara“, Lachs mit Apfel-Miso-Glasur.</p></li>
+    </ul>
+  </div>
 
     <a class="btn btn-primary" href="/index.html#formular">Catering mit Anna anfragen</a>
   </div>
 </section>
 
-    <!-- Galerie -->
-    <section class="container gallery">
-      <h2>Galerie: Kreationen</h2>
-      <div class="gallery-grid">
-        <img src="/assets/img/Carbonara.jpg" alt="Signature: Sellerie »Carbonara«" width="320" height="350" loading="lazy">
-        <img src="/assets/img/Lachs_mit_Apfel-Miso-Glasur.jpg" alt="Lachs mit Apfel-Miso-Glasur" width="320" height="350" loading="lazy">
-        <img src="/assets/img/Fermentierter_Spargel.jpg" alt="Fermentierter Spargel mit Molke" width="320" height="350" loading="lazy">
-        <img src="/assets/img/Molke_Rote-Bete.jpg" alt="Rote-Bete-Tatar" width="320" height="350" loading="lazy">
-        <img src="/assets/img/Tatar_Schokoladen-Dessert.jpg" alt="Schokoladen-Dessert mit Buchweizen" width="320" height="350" loading="lazy">
-        <img src="/assets/img/Auster_mit_Dill-Öl.jpg" alt="Auster mit Dill-Öl" width="320" height="350" loading="lazy">
-      </div>
-      <p style="color:var(--muted); margin-top:.5rem;">Platzhalterbilder – später durch echte Fotos ersetzen.</p>
-    </section>
+<section class="container gallery">
+  <h2>Galerie: Kreationen</h2>
+
+  <div class="gallery-grid">
+    <figure class="card">
+      <img src="/assets/img/Carbonara.jpg" alt="Signature: Sellerie »Carbonara«" loading="lazy">
+      <figcaption>
+        <strong>Sellerie „Carbonara“</strong>
+        <span>Selleriestreifen in cremiger Carbonara-Emulsion, Pecorino & schwarzer Pfeffer.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="/assets/img/Lachs_mit_Apfel-Miso-Glasur.jpg" alt="Lachs mit Apfel-Miso-Glasur" loading="lazy">
+      <figcaption>
+        <strong>Lachs mit Apfel-Miso-Glasur</strong>
+        <span>Sanft gegart, süß-herzhaft glasiert, mit jungen Kräutern.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="/assets/img/Fermentierter_Spargel.jpg" alt="Fermentierter Spargel mit Molke" loading="lazy">
+      <figcaption>
+        <strong>Fermentierter Spargel mit Molke</strong>
+        <span>Weißer Spargel in Molke-Dill-Sud, feine Säure & Frische.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="/assets/img/Molke_Rote-Bete.jpg" alt="Rote-Bete-Tatar" loading="lazy">
+      <figcaption>
+        <strong>Rote-Bete-Tatar</strong>
+        <span>Mit Roggencrunch, Kräuteröl und eingelegter Zwiebel.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="/assets/img/Tatar_Schokoladen-Dessert.jpg" alt="Schokoladen-Dessert mit Buchweizen" loading="lazy">
+      <figcaption>
+        <strong>Schokoladen-Dessert mit Buchweizen</strong>
+        <span>Glänzender Schokodome auf geröstetem Buchweizen, knusprige Tuile.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="/assets/img/Auster_mit_Dill-Öl.jpg" alt="Auster mit Dill-Öl" loading="lazy">
+      <figcaption>
+        <strong>Auster mit Dill-Öl</strong>
+        <span>Auf Crushed Ice, Dill-Öl und Zitronenzeste.</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
   </main>
 
 <footer>
