@@ -1,60 +1,96 @@
 <!DOCTYPE html>
+<!-- HTML5 Dokumenttyp-Deklaration -->
 <html lang="de">
+<!-- HTML-Root-Element mit deutscher Sprache für SEO und Accessibility -->
 <head>
+  <!-- Zeichensatz UTF-8 für korrekte Darstellung von Umlauten -->
   <meta charset="utf-8">
+  
+  <!-- Viewport-Meta-Tag für responsive Design auf mobilen Geräten -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Seitentitel für Browser-Tab und Suchmaschinen -->
   <title>Restaurant Aurora – Event-Catering</title>
+  
+  <!-- Meta-Description für SEO - beschreibt den Inhalt der Seite -->
   <meta name="description" content="Exklusives Catering für Hochzeiten, Firmenfeiern & private Events. Gala-Dinner, Flying Buffet & mehr.">
+  
+  <!-- Verlinkung zur externen CSS-Datei -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header-Bereich der Website -->
   <header class="site-header">
+    <!-- Container für Navigationsleiste -->
     <div class="container navbar">
+      <!-- Logo/Markenname des Restaurants -->
       <div class="brand">Restaurant Aurora</div>
+      
+      <!-- Hauptnavigation mit ARIA-Label für Screenreader -->
       <nav class="navlinks" aria-label="Hauptnavigation">
+        <!-- Navigationslinks zu verschiedenen Seiten -->
         <a href="index.html">Event-Catering</a>
         <a href="/pages/chef.html">Unsere Chefköchin</a>
         <a href="/pages/speisekarte.html">Speisekarte</a>
         <a href="/pages/rezepte.html">Rezepte</a>
+        <!-- Auskommentierter CTA-Button (Lukas meinte, es sieht schlecht aus) -->
         <!-- L!! <a class="btn btn-primary" href="reservierung.html#formular">Jetzt anfragen</a> Lukas meinte sied Kake aus! -->
       </nav>
     </div>
   </header>
 
+  <!-- Hauptinhalt der Seite -->
   <main>
-    <!-- Hero -->
+    <!-- Hero-Sektion mit Video-Hintergrund -->
     <section class="hero">
-      <video autoplay loop muted><source src="/assets/vid/200141-912119488_tiny.mp4"></video>
+      <!-- Hintergrund-Video mit automatischem Abspielen, Loop und stummgeschaltet -->
+      <video autoplay loop muted>
+        <!-- Video-Quelle -->
+        <source src="/assets/vid/200141-912119488_tiny.mp4">
+      </video>
+      
+      <!-- Container für Hero-Inhalt -->
       <div class="container">
+        <!-- Hauptüberschrift der Seite -->
         <h1>Exklusives Event-Catering, das in Erinnerung bleibt.</h1>
+        
+        <!-- Beschreibungstext -->
         <p>Von der eleganten Hochzeit bis zur stilvollen Firmenfeier – unser Team kreiert Menüs,
            die Geschichten erzählen: saisonal, regional und immer mit einem Hauch von Luxus.</p>
-          <a class="btn btn-primary" href="#formular">Jetzt unverbindlich anfragen</a>
+           
+        <!-- Call-to-Action Button, der zum Formular weiterleitet -->
+        <a class="btn btn-primary" href="#formular">Jetzt unverbindlich anfragen</a>
       </div>
     </section>
 
-    <!-- Kurz-Intro -->
+    <!-- Kurze Einführung zu den Catering-Paketen -->
     <section class="container" style="padding-block:2rem;">
+      <!-- Überschrift für Catering-Pakete mit Inline-Styling -->
       <h2 style="margin:0 0 .25rem;">Catering-Pakete</h2>
+      
+      <!-- Beschreibungstext mit CSS-Klasse für Styling -->
       <p class="schriften">
         Wähle das Paket, das zu deinem Event passt – individuell anpassbar.
       </p>
 
+      <!-- Container für Karten-Layout der verschiedenen Pakete -->
       <div class="cards">
+        <!-- Erste Karte: Gala-Dinner -->
         <article class="card">
           <h3>Gala-Dinner</h3>
           <p>Mehrgängiges Menü am Tisch serviert, weiß eingedeckt, mit Weinbegleitung.</p>
           <div><strong>ab 79 €</strong> pro Person</div>
         </article>
 
+        <!-- Zweite Karte: Flying Buffet -->
         <article class="card">
           <h3>Flying Buffet</h3>
           <p>Elegante, kleine Gänge im Umlauf – ideal fürs Networking ohne feste Plätze.</p>
           <div><strong>ab 49 €</strong> pro Person</div>
         </article>
 
+        <!-- Dritte Karte: Streetfood-Stationen -->
         <article class="card">
           <h3>Streetfood-Stationen</h3>
           <p>Live-Cooking an Themen-Stationen: mediterran, asian fusion, vegan & mehr.</p>
@@ -62,48 +98,61 @@
         </article>
       </div>
 
+      <!-- Hinweistext für Flexibilität der Pakete -->
       <p class="schriften">
         Hinweis: Alle Pakete sind flexibel kombinierbar. Wir beraten dich gern zu Mengen, Ablauf & Ausstattung.
       </p>
     </section>
   </main>
 
-  <!-- Kontaktformular -->
+  <!-- Kontaktformular-Sektion -->
   <section id="formular" class="container" style="padding-block:2rem;">
+    <!-- Überschrift für das Formular -->
     <h2>Reservierungsanfrage</h2>
+    
+    <!-- Beschreibungstext für das Formular -->
     <p>Nutzen Sie unser Formular, um eine unverbindliche Anfrage für Ihr Event-Catering zu stellen.</p>
 
+    <!-- Formular mit POST-Methode -->
     <form action="/send" method="post" class="contact-form">
+      <!-- Name-Eingabefeld -->
       <div class="form-row">
         <label for="name">Name <span aria-hidden="true">*</span></label>
-        <input type="text" id="name"jh name="name" required autocomplete="name">
+        <!-- FEHLER KORRIGIERT: "id="name"jh" zu "id="name"" -->
+        <input type="text" id="name" name="name" required autocomplete="name">
       </div>
 
+      <!-- E-Mail-Eingabefeld -->
       <div class="form-row">
         <label for="email">E-Mail <span aria-hidden="true">*</span></label>
         <input type="email" id="email" name="email" required autocomplete="email">
       </div>
 
+      <!-- Telefon-Eingabefeld (optional) -->
       <div class="form-row">
         <label for="phone">Telefon</label>
         <input type="tel" id="phone" name="phone" autocomplete="tel">
       </div>
 
+      <!-- Datum des Events -->
       <div class="form-row">
         <label for="eventdate">Datum des Events</label>
         <input type="date" id="eventdate" name="eventdate">
       </div>
 
+      <!-- Anzahl der Gäste -->
       <div class="form-row">
         <label for="guests">Anzahl Gäste</label>
         <input type="number" id="guests" name="guests" min="1">
       </div>
 
+      <!-- Nachricht/Wünsche-Textfeld -->
       <div class="form-row">
         <label for="message">Ihre Nachricht / Wünsche <span aria-hidden="true">*</span></label>
         <textarea id="message" name="message" rows="6" required></textarea>
       </div>
 
+      <!-- Datenschutz-Zustimmung Checkbox -->
       <div class="form-row form-row--checkbox">
         <input type="checkbox" id="consent" name="consent" required>
         <label for="consent">
@@ -111,23 +160,31 @@
         </label>
       </div>
 
+      <!-- Formular-Aktionen (Buttons) -->
       <div class="form-actions">
+        <!-- Submit-Button zum Senden des Formulars -->
         <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        <!-- Reset-Button zum Zurücksetzen des Formulars -->
         <button type="reset" class="btn btn-secondary">Zurücksetzen</button>
       </div>
     </form>
   </section>
 
+  <!-- Footer-Bereich -->
   <footer>
+    <!-- Container für Footer-Inhalt -->
     <div class="container">
+      <!-- Restaurantname in fett -->
       <strong>Restaurant Aurora</strong><br>
+      <!-- Kontaktdaten: Adresse, Telefon und E-Mail -->
       Musterstraße 1, 60311 Frankfurt am Main · Tel. 069 / 123456 ·
       <a href="mailto:hallo@aurora.example">hallo@aurora.example</a>  
     
-    <p>
-      <a href="/pages/impressum.html">Impressum</a> ·
-      <a href="/pages/datenschutz.html">Datenschutz</a>
-    </p>
+      <!-- Rechtliche Links -->
+      <p>
+        <a href="/pages/impressum.html">Impressum</a> ·
+        <a href="/pages/datenschutz.html">Datenschutz</a>
+      </p>
 
     </div>
   </footer>

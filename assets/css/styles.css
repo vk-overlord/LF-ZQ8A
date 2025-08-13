@@ -1,127 +1,245 @@
 /* ===== Reset & Basics ===== */
+
+/* Universal-Selector: Wendet box-sizing: border-box auf alle Elemente und deren Pseudo-Elemente an */
+/* Dies sorgt dafür, dass Padding und Border in die Gesamtbreite/höhe eingerechnet werden */
 *,
 *::before,
-*::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+*::after { 
+  box-sizing: border-box; 
+}
+
+/* Aktiviert sanftes Scrollen für Anker-Links */
+html { 
+  scroll-behavior: smooth; 
+}
+
+/* Body-Grundeinstellungen */
 body {
-  margin: 0;
+  margin: 0;  /* Entfernt Standard-Margin des Browsers */
+  
+  /* System-Font-Stack: Verwendet die beste verfügbare Schriftart des jeweiligen Betriebssystems */
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, "Helvetica Neue", sans-serif;
-  color: #1f2937; /* gray-800 */
-  background: var(--accent);
-  line-height: 1.6;
+  
+  color: #1f2937; /* Dunkle Textfarbe (Tailwind gray-800 equivalent) */
+  background: var(--accent); /* Verwendet die CSS-Variable für Hintergrundfarbe */
+  line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
 }
 
 /* ===== Design-Token ===== */
+
+/* CSS Custom Properties (Variablen) für konsistentes Design */
 :root{
-  --max-w: 1200px;
-  --space: 1rem;
-  --radius: 16px;
-  --accent: #f8dcb8;  
-  --accent-ink: #0b0b0b;  
-  --muted: #fff;       
+  --max-w: 1200px;     /* Maximale Container-Breite */
+  --space: 1rem;       /* Standard-Abstand */
+  --radius: 16px;      /* Standard-Border-Radius */
+  --accent: #f8dcb8;   /* Hauptakzentfarbe (helles Beige) */
+  --accent-ink: #0b0b0b;  /* Dunkle Textfarbe für Akzent-Bereiche */
+  --muted: #fff;       /* Gedämpfte/sekundäre Farbe (Weiß) */
 }
 
 /* ===== Utilities ===== */
-.container { width: min(100% - 2rem, var(--max-w)); margin-inline: auto; }
-.grid { display: grid; gap: 1rem; }
-.btn {
-  display: inline-block; padding: .875rem 1.25rem; border-radius: 999px;
-  text-decoration: none; font-weight: 600;
+
+/* Responsive Container: Begrenzt Breite und zentriert Inhalt */
+.container { 
+  width: min(100% - 2rem, var(--max-w)); /* Nimmt 100% minus 2rem oder max-width, je nachdem was kleiner ist */
+  margin-inline: auto; /* Zentriert horizontal (moderne CSS-Syntax) */
 }
+
+/* Grid-Layout mit Standard-Gap */
+.grid { 
+  display: grid; 
+  gap: 1rem; 
+}
+
+/* Button-Basis-Styles */
+.btn {
+  display: inline-block; 
+  padding: .875rem 1.25rem; /* Innenabstand oben/unten links/rechts */
+  border-radius: 999px; /* Vollständig runde Ecken (Pill-Shape) */
+  text-decoration: none; /* Entfernt Unterstreichung bei Links */
+  font-weight: 600; /* Halbfett */
+}
+
+/* Primary Button Styling */
 .btn-primary { 
-  transition: all .5s;
-  background: #e5b474; 
-  color: var(--accent-ink);
- }
-.btn-primary:focus, .btn-primary:hover { 
-  filter: brightness(0.95); 
-  transform: scale(1.2);
+  transition: all .5s; /* Sanfte Übergänge für alle Eigenschaften */
+  background: #e5b474; /* Goldener Hintergrund */
+  color: var(--accent-ink); /* Dunkler Text */
+}
+
+/* Hover- und Focus-Effekte für Primary Button */
+.btn-primary:focus, 
+.btn-primary:hover { 
+  filter: brightness(0.95); /* Macht Button 5% dunkler */
+  transform: scale(1.2); /* Vergrößert Button um 20% */
 }
 
 /* ===== Header / Nav ===== */
+
+/* Sticky Header: Bleibt beim Scrollen oben sichtbar */
 header.site-header{
-  position: sticky; top: 0; z-index: 10; background: #e5b474; border-bottom: 1px solid #eee;
+  position: sticky; 
+  top: 0; 
+  z-index: 10; /* Hoher z-index damit Header über anderen Elementen liegt */
+  background: #e5b474; /* Goldener Hintergrund */
+  border-bottom: 1px solid #eee; /* Subtile untere Grenze */
 }
-.navbar { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; }
-.brand { font-weight: 800; letter-spacing: .5px; }
-.navlinks { display: flex; gap: 1rem; }
-.navlinks a { text-decoration: none; color: inherit; font-weight: 500; }
-.navlinks a:hover { color: var(--accent-ink); }
+
+/* Flexbox-Layout für Navigation */
+.navbar { 
+  display: flex; 
+  align-items: center; /* Vertikal zentriert */
+  justify-content: space-between; /* Platz zwischen Brand und Navigation */
+  padding: .75rem 0; /* Vertikaler Innenabstand */
+}
+
+/* Logo/Markenname Styling */
+.brand { 
+  font-weight: 800; /* Extra fett */
+  letter-spacing: .5px; /* Leichter Buchstaben-Abstand */
+}
+
+/* Navigationslinks Container */
+.navlinks { 
+  display: flex; 
+  gap: 1rem; /* Abstand zwischen Links */
+}
+
+/* Navigationslink Styling */
+.navlinks a { 
+  text-decoration: none; /* Keine Unterstreichung */
+  color: inherit; /* Erbt Farbe vom Elternelement */
+  font-weight: 500; /* Mittlere Schriftstärke */
+}
+
+/* Hover-Effekt für Navigationslinks */
+.navlinks a:hover { 
+  color: var(--accent-ink); /* Wechselt zu dunkler Farbe */
+}
 
 /* ===== Hero ===== */
+
+/* Video-Hintergrund Positioning */
 video {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: -2;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; /* Video füllt Container aus ohne Verzerrung */
+  z-index: -2; /* Hinter dem Overlay */
 }
+
+/* Hero-Sektion Styling */
 .hero {
   position: relative;
-  isolation: isolate;
-  color: #faf7f2;
-  min-height: 50vh;
+  isolation: isolate; /* Erstellt neuen Stacking Context */
+  color: #faf7f2; /* Helle Textfarbe */
+  min-height: 50vh; /* Mindestens halbe Viewport-Höhe */
   display: grid;
-  place-items: center;
+  place-items: center; /* Zentriert Inhalt horizontal und vertikal */
   text-align: center;
- /* background: #faf7f2 url("/assets/img/restaurant.png") center / cover no-repeat;*/
+  /* Auskommentiertes Hintergrundbild als Fallback */
+  /* background: #faf7f2 url("/assets/img/restaurant.png") center / cover no-repeat; */
 }
+
+/* Dunkles Overlay über Hero-Hintergrund für bessere Textlesbarkeit */
 .hero::after {
-  content: "";
+  content: ""; /* Leerer Inhalt für Pseudo-Element */
   position: absolute;
-  inset: 0;
+  inset: 0; /* Kurzform für top: 0, right: 0, bottom: 0, left: 0 */
   background: linear-gradient(
-    180deg,
-    rgba(0,0,0,0.4) 0%,    
-    rgba(0,0,0,0.6) 70%    
+    180deg, /* Verlauf von oben nach unten */
+    rgba(0,0,0,0.4) 0%,    /* 40% Transparenz oben */
+    rgba(0,0,0,0.6) 70%    /* 60% Transparenz unten */
   );
-  z-index: -1;
+  z-index: -1; /* Vor dem Video, aber hinter dem Text */
 }
-.hero h1{ font-size: clamp(1.5rem, 3vw, 2.5rem); margin: 0 0 .5rem; }
-.hero p{ max-width: 65ch; margin: 0 auto 1.25rem; color: var(--muted); }
+
+/* Hero Überschrift mit responsiver Größe */
+.hero h1{ 
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /* Min 1.5rem, 3% der Viewport-Breite, max 2.5rem */
+  margin: 0 0 .5rem; /* Nur unten Margin */
+}
+
+/* Hero Beschreibungstext */
+.hero p{ 
+  max-width: 65ch; /* Maximale Breite von 65 Zeichen für bessere Lesbarkeit */
+  margin: 0 auto 1.25rem; /* Zentriert mit unterem Margin */
+  color: var(--muted); /* Verwendet muted-Farbe */
+}
 
 /* ===== Karten (Pakete) ===== */
-.cards{ display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:1rem; margin-block: 2rem; }
-.card{
-  color:#374151;
-  border: 1px solid #eee; border-radius: var(--radius); padding: 1.25rem; background: #e5b474;
-}
-.card h3{ margin: 0 0 .25rem; }
-.card p{ margin: .25rem 0 .75rem; color: var(#374151); }
 
+/* Grid-Layout für Karten mit 3 Spalten */
+.cards{ 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0,1fr)); /* 3 gleichmäßige Spalten */
+  gap: 1rem; 
+  margin-block: 2rem; /* Vertikaler Margin oben und unten */
+}
+
+/* Einzelne Karte Styling */
+.card{
+  color: #374151; /* Graue Textfarbe */
+  border: 1px solid #eee; /* Helle Umrandung */
+  border-radius: var(--radius); /* Verwendet CSS-Variable für Rundung */
+  padding: 1.25rem; /* Innenabstand */
+  background: #e5b474; /* Goldener Hintergrund */
+}
+
+/* Karten-Überschrift */
+.card h3{ 
+  margin: 0 0 .25rem; /* Nur unten kleiner Margin */
+}
+
+/* Karten-Beschreibung */
+.card p{ 
+  margin: .25rem 0 .75rem; /* Kleiner Margin oben, größerer unten */
+  color: var(#374151); /* FEHLER: Falsche CSS-Syntax - sollte #374151 sein */
+}
+
+/* ===== Speisekarte ===== */
+
+/* Container für Speisekarte - einspaltig */
 .speisekarte {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Eine Spalte, die den ganzen Platz nimmt */
   gap: 1rem;
-  margin-block: 2rem;
+  margin-block: 2rem; /* Vertikaler Abstand */
 }
 
+/* Einzelne Speise mit Hintergrundbild */
 .speise {
-  position: relative;
+  position: relative; /* Für absolute Positionierung der Pseudo-Elemente */
   border: 1px solid #eee;
   border-radius: var(--radius);
   padding: 1.25rem;
-  color:white; /* Textfarbe weiß für bessere Lesbarkeit */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  color: white; /* Weiße Textfarbe für bessere Lesbarkeit auf Bildern */
+  background-size: cover; /* Hintergrundbild füllt Element aus */
+  background-position: center; /* Zentriert das Hintergrundbild */
+  background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
+  overflow: hidden; /* Verhindert Überlauf des Pseudo-Elements */
 }
 
+/* Dunkles Overlay über Speise-Hintergrundbildern */
 .speise::before {
-  content: '';
+  content: ''; /* Leerer Inhalt für Pseudo-Element */
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dunkler Overlay für besseren Kontrast */
+  inset: 0; /* Füllt das gesamte Elternelement */
+  background: rgba(0, 0, 0, 0.4); /* 40% transparenter schwarzer Overlay */
   border-radius: var(--radius);
-  z-index: 0;
+  z-index: 0; /* Unter dem Text, aber über dem Hintergrundbild */
 }
 
+/* Alle direkten Kinder von .speise über das Overlay legen */
 .speise > * {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Über dem Overlay */
 }
 
-/* Einzelne Hintergrundbilder */
+/* ===== Einzelne Hintergrundbilder für Speisen ===== */
+
 .nudeln {
   background-image: url('/assets/img/nudeln.png');
 }
@@ -135,63 +253,91 @@ video {
 }
 
 /* ===== Footer ===== */
+
+/* Footer-Styling */
 footer{
-  margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #eee; color: #374151;
+  margin-top: 3rem; /* Großer oberer Abstand */
+  padding: 2rem 0; /* Vertikaler Innenabstand */
+  border-top: 1px solid #eee; /* Obere Trennlinie */
+  color: #374151; /* Graue Textfarbe */
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive Design ===== */
+
+/* Tablet-Breakpoint: 2-spaltiges Grid für Karten */
 @media (max-width: 900px){
-  .cards{ grid-template-columns: 1fr 1fr; }
+  .cards{ 
+    grid-template-columns: 1fr 1fr; /* 2 Spalten */
+  }
 }
+
+/* Mobile-Breakpoint: Navigation ausblenden, 1-spaltige Karten */
 @media (max-width: 600px){
-  .navlinks{ display:none; } /* simpel: für Start ohne Mobile-Menu */
-  .cards{ grid-template-columns: 1fr; }
+  .navlinks{ 
+    display: none; /* Versteckt Navigation (vereinfacht, ohne Mobile-Menu) */
+  } 
+  .cards{ 
+    grid-template-columns: 1fr; /* 1 Spalte */
+  }
 }
+
+/* ===== Zusätzliche Komponenten ===== */
+
+/* Schriften-Klasse für Text-Styling */
 .schriften {
-  color:#000000; 
-  margin:0 0 1rem;
-  font-size: 1rem;
-
+  color: #000000; /* Schwarze Textfarbe */
+  margin: 0 0 1rem; /* Unten 1rem Margin */
+  font-size: 1rem; /* Standard-Schriftgröße */
 }
 
+/* Kontaktformular-Styling */
+
+/* Form-Row Container */
 .contact-form .form-row {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+  flex-direction: column; /* Stapelt Label und Input vertikal */
+  margin-bottom: 1rem; /* Abstand zwischen Form-Elementen */
 }
 
+/* Input-Elemente Styling */
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #272727;
-  color: #ffffff;
-  font: inherit;
+  padding: 0.5rem 0.75rem; /* Innenabstand */
+  border: 1px solid #ccc; /* Helle Umrandung */
+  border-radius: 6px; /* Leicht gerundete Ecken */
+  background-color: #272727; /* Dunkler Hintergrund */
+  color: #ffffff; /* Weiße Textfarbe */
+  font: inherit; /* Erbt Schrift vom Elternelement */
 }
 
+/* Focus-Styling für Input-Elemente */
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border-color: #ffbb33;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255,187,51,0.3);
+  border-color: #ffbb33; /* Goldene Umrandung bei Focus */
+  outline: none; /* Entfernt Standard-Outline */
+  box-shadow: 0 0 0 3px rgba(255,187,51,0.3); /* Goldener Glow-Effekt */
 }
 
+/* Checkbox-spezifische Form-Row */
 .form-row--checkbox {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: row; /* Horizontal angeordnet */
+  align-items: center; /* Vertikal zentriert */
 }
 
+/* Checkbox Input mit rechtem Margin */
 .form-row--checkbox input {
   margin-right: 0.5rem;
 }
 
+/* ===== Profil-Sektion ===== */
+
+/* Basis Profil-Bild Styling */
 .profile img {
-  max-width: 250px;   /* Bild wird nie breiter als 250px */
-  height: auto;       /* Höhe passt sich automatisch an */
-  display: block;     /* Verhindert unnötige Lücken bei Inline-Elementen */
+  max-width: 250px;   /* Maximale Bildbreite */
+  height: auto;       /* Proportionale Höhe */
+  display: block;     /* Block-Element für saubere Darstellung */
 }
 
 /* Profil-Card Container */
