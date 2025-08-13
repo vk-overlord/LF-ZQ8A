@@ -153,3 +153,37 @@ footer{
   font-size: 1rem;
 
 }
+
+/* ===== Kontaktformular ===== */
+
+.contact-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-row label {
+  margin-bottom: .5rem;
+}
+
+.contact-form .form-row input,
+.contact-form .form-row textarea {
+  padding: .75rem;
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.contact-form .form-row--checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-form .form-row--checkbox input {
+  margin-right: .5rem;
+}
+
+.contact-form .form-actions {
+  display: flex;
+  gap: 1rem;
+}
