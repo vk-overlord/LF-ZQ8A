@@ -40,7 +40,7 @@ body {
 
 /* ===== Header / Nav ===== */
 header.site-header{
-  position: sticky; top: 0; z-index: 10; background: var(--accent); border-bottom: 1px solid #eee;
+  position: sticky; top: 0; z-index: 10; background: #e5b474; border-bottom: 1px solid #eee;
 }
 .navbar { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; }
 .brand { font-weight: 800; letter-spacing: .5px; }
