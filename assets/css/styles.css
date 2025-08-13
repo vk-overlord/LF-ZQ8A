@@ -167,14 +167,14 @@ footer{
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: #272727;
-  color: #ffffff;
+  color: #333;
   font: inherit;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border-color: #ffbb33; /* or your accent color */
+  border-color: #ffbb33;
   outline: none;
   box-shadow: 0 0 0 3px rgba(255,187,51,0.3);
 }
