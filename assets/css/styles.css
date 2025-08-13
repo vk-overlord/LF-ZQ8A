@@ -187,3 +187,9 @@ footer{
 .form-row--checkbox input {
   margin-right: 0.5rem;
 }
+
+.profile img {
+  max-width: 250px;   /* Bild wird nie breiter als 250px */
+  height: auto;       /* Höhe passt sich automatisch an */
+  display: block;     /* Verhindert unnötige Lücken bei Inline-Elementen */
+}
