@@ -30,7 +30,7 @@
         <h1>Exklusives Event-Catering, das in Erinnerung bleibt.</h1>
         <p>Von der eleganten Hochzeit bis zur stilvollen Firmenfeier – unser Team kreiert Menüs,
            die Geschichten erzählen: saisonal, regional und immer mit einem Hauch von Luxus.</p>
-        <a class="btn btn-primary" href="reservierung.html#formular">Jetzt unverbindlich anfragen</a>
+          <a class="btn btn-primary" href="#formular">Jetzt unverbindlich anfragen</a>
       </div>
     </section>
 
@@ -67,10 +67,61 @@
     </section>
   </main>
 
+  <!-- Kontaktformular -->
+  <section id="formular" class="container" style="padding-block:2rem;">
+    <h2>Reservierungsanfrage</h2>
+    <p>Nutzen Sie unser Formular, um eine unverbindliche Anfrage für Ihr Event-Catering zu stellen.</p>
+
+    <form action="/send" method="post" class="contact-form">
+      <div class="form-row">
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <label for="email">E-Mail <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Telefon</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+
+      <div class="form-row">
+        <label for="eventdate">Datum des Events</label>
+        <input type="date" id="eventdate" name="eventdate">
+      </div>
+
+      <div class="form-row">
+        <label for="guests">Anzahl Gäste</label>
+        <input type="number" id="guests" name="guests" min="1">
+      </div>
+
+      <div class="form-row">
+        <label for="message">Ihre Nachricht / Wünsche <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <div class="form-row form-row--checkbox">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">
+          Ich stimme der Verarbeitung meiner Daten gemäß <a href="/datenschutz.html">Datenschutzerklärung</a> zu.
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        <button type="reset" class="btn btn-secondary">Zurücksetzen</button>
+      </div>
+    </form>
+  </section>
+
   <footer>
     <div class="container">
       <strong>Restaurant Aurora</strong><br>
-      Musterstraße 1, 60311 Frankfurt am Main · Tel. 069 / 123456 · <a href="mailto:hallo@aurora.example">hallo@aurora.example</a>
+      Musterstraße 1, 60311 Frankfurt am Main · Tel. 069 / 123456 ·
+      <a href="mailto:hallo@aurora.example">hallo@aurora.example</a>
     </div>
   </footer>
 </body>
