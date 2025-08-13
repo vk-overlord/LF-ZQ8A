@@ -1,20 +1,34 @@
 ﻿<!DOCTYPE html>
+<!-- HTML5 Dokumenttyp-Deklaration - definiert die HTML-Version -->
 <html lang="de">
-
+<!-- HTML-Root-Element mit deutscher Sprache für Accessibility und SEO -->
 <head>
+  <!-- Zeichensatz UTF-8 für korrekte Darstellung von Umlauten und Sonderzeichen -->
   <meta charset="utf-8">
+  
+  <!-- Viewport-Meta-Tag für responsive Design auf mobilen Geräten -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Seitentitel, wird im Browser-Tab und von Suchmaschinen angezeigt -->
   <title>Restaurant Aurora – Speisekarte</title>
+  
+  <!-- Meta-Description für SEO - Kurzbeschreibung der Seite -->
   <meta name="description" content="Unsere Speisekarte">
+  
+  <!-- Verlinkung zur externen CSS-Datei für das Styling -->
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-
 <body>
-  <!-- Header -->
+  <!-- Header-Bereich der Website -->
   <header class="site-header">
+    <!-- Container für die Navigationsleiste -->
     <div class="container navbar">
+      <!-- Markenname/Logo des Restaurants -->
       <div class="brand">Restaurant Aurora</div>
+      
+      <!-- Hauptnavigation mit ARIA-Label für Barrierefreiheit -->
       <nav class="navlinks" aria-label="Hauptnavigation">
+        <!-- Navigationslinks zu verschiedenen Seiten -->
         <a href="/index.html">Event-Catering</a>
         <a href="/pages/chef.html">Unsere Chefköchin</a>
         <a href="/pages/speisekarte.html">Speisekarte</a>
@@ -22,27 +36,37 @@
       </nav>
     </div>
   </header>
-
-  <!-- Hauptinhalt -->
+  
+  <!-- Hauptinhalt der Seite -->
   <main class="page-content container">
+    <!-- Hauptüberschrift der Seite -->
     <h1>Speisekarte</h1>
+    
+    <!-- Auskommentierter Lead-Text (könnte aktiviert werden für zusätzliche Beschreibung) -->
     <!--<p class="lead">
       Unsere Speisekarte
     </p>-->
-
+    
+    <!-- Container für die Speisekarte -->
     <div class="speisekarte">
+      <!-- Einzelne Speise als semantisches article-Element -->
       <article class="speise nudeln">
+        <!-- Titel der Speise -->
         <h3>Nudeln</h3>
+        <!-- Beschreibung der Speise -->
         <p>mit Tomatensoße</p>
+        <!-- Preisangabe mit strong-Element für Betonung -->
         <div><strong>ab 10 €</strong> pro Person</div>
       </article>
-
+      
+      <!-- Zweite Speise -->
       <article class="speise currywurst">
         <h3>Curryworscht</h3>
         <p>mit Pommes oder Brötchen</p>
         <div><strong>ab 9 €</strong> pro Person</div>
       </article>
-
+      
+      <!-- Dritte Speise -->
       <article class="speise doener">
         <h3>Döner</h3>
         <p>macht schöner</p>
@@ -50,21 +74,23 @@
       </article>
     </div>
   </main>
-  
-  <!-- Footer -->
-<footer>
+ 
+  <!-- Footer-Bereich der Website -->
+  <footer>
+    <!-- Container für Footer-Inhalt -->
     <div class="container">
+      <!-- Restaurantname in fett -->
       <strong>Restaurant Aurora</strong><br>
+      <!-- Kontaktdaten: Adresse, Telefon und E-Mail -->
       Musterstraße 1, 60311 Frankfurt am Main · Tel. 069 / 123456 ·
       <a href="mailto:hallo@aurora.example">hallo@aurora.example</a>  
-    
-    <p>
-      <a href="/pages/impressum.html">Impressum</a> ·
-      <a href="/pages/datenschutz.html">Datenschutz</a>
-    </p>
-
+   
+      <!-- Rechtliche Links -->
+      <p>
+        <a href="/pages/impressum.html">Impressum</a> ·
+        <a href="/pages/datenschutz.html">Datenschutz</a>
+      </p>
     </div>
   </footer>
 </body>
-
 </html>
