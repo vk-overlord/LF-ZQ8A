@@ -153,3 +153,37 @@ footer{
   font-size: 1rem;
 
 }
+
+.contact-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #272727;
+  color: #ffffff;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #ffbb33; /* or your accent color */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,187,51,0.3);
+}
+
+.form-row--checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-row--checkbox input {
+  margin-right: 0.5rem;
+}
