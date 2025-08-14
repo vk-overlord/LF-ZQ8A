@@ -276,15 +276,15 @@ video {
 /* ===== Einzelne Hintergrundbilder für Speisen ===== */
 
 .nudeln {
-  background-image: url('../assets/img/nudeln.png');
+  background-image: url('../img/nudeln.png');
 }
 
 .currywurst {
-  background-image: url('../assets/img/curryworscht.png');
+  background-image: url('../img/curryworscht.png');
 }
 
 .doener {
-  background-image: url('../assets/img/doener.png');
+  background-image: url('../img/doener.png');
 }
 
 /* ===== Footer ===== */
